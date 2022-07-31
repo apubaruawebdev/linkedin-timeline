@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linkedin Timeline</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!--===========================================
+                Header Start Here
+    ============================================-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-2">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                        fill="#0a66c2" class="mercado-match" width="45" height="45" focusable="false">
+                        <path
+                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                        </path>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex position-relative" role="search">
+                        <input class="form-control me-2 ps-5 border-0 search-bg" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn bg-transparent position-absolute top-50 start-0 translate-middle-y border-0">
+                            <i class="bi bi-search fs-5"></i>
+                        </button>
+                    </form>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 myMenu align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                                    fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path
+                                        d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z">
+                                    </path>
+                                </svg> <span>Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+                                    class="mercado-match" width="24" height="24" focusable="false">
+                                    <path
+                                        d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z">
+                                    </path>
+                                </svg> <span>My Network</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+                                    class="mercado-match" width="24" height="24" focusable="false">
+                                    <path
+                                        d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z">
+                                    </path>
+                                </svg> <span>Jobs</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+                                    class="mercado-match" width="24" height="24" focusable="false">
+                                    <path
+                                        d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z">
+                                    </path>
+                                </svg> <span>Messaging</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+                                    class="mercado-match" width="24" height="24" focusable="false">
+                                    <path
+                                        d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z">
+                                    </path>
+                                </svg> <span>Notifications</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img class="rounded-circle meprofile" src="images/apu barua.jpg" alt="">
+                                <div class="d-flex align-items-center">
+                                    <span>Me</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                        data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16"
+                                        height="16" focusable="false">
+                                        <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--===========================================
+                Header End Here
+    ============================================-->
+    <!--===========================================
+                Main Start Here
+    ============================================-->
+    <main>
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-lg-3">
+                    <div class="d-flex align-items-center d-lg-none">
+                        <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            <i class="btn btn-primary bi bi-sliders"></i>
+                            <span class="h6 mb-0 fw-bold ms-2">profile</span>
+                        </button>
+                    </div>
+                    <nav class="navbar navbar-expand-lg mx-0">
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body d-block px-2">
+                                <div class="card overflow-hidden">
+                                    <div class="h-80px"
+                                        style="background-image: url(images/01.jpg);background-repeat: no-repeat;background-size: cover;background-position: center;">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <a href="#" class="avatar">
+                                                <img class="avatar-img border border-white border-3 rounded-circle shadow"
+                                                    src="images/apu barua.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="avatar-name">
+                                                Apu Barua
+                                            </a>
+                                            <small class="d-block new-small">Junior Web Designer at Prime Tech Solutions
+                                                Ltd.</small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="d-flex justify-content-between">
+                                                        <div class="growNetwork"><span
+                                                                class="d-block connections-span">Connections</span>
+                                                            Grow your network
+                                                        </div>
+                                                        <div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                data-supported-dps="16x16" fill="#000"
+                                                                class="mercado-match" width="16" height="16"
+                                                                focusable="false">
+                                                                <path
+                                                                    d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#"
+                                                        class="d-flex justify-content-between align-items-center">
+                                                        <div><span class="d-block connections-span">Invitations</span>
+                                                        </div>
+                                                        <div style="font-size: 12px;color: #000">
+                                                            3
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="d-flex justify-content-between">
+                                                        <div class="growNetwork"><span
+                                                                class="d-block connections-span">Access exclusive tools
+                                                                & insights</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                                data-supported-dps="24x24" class="mercado-match"
+                                                                width="24" height="24" focusable="false">
+                                                                <path
+                                                                    d="M20 20a3.36 3.36 0 001-2.39V6.38A3.38 3.38 0 0017.62 3H6.38A3.36 3.36 0 004 4z"
+                                                                    fill="#f8c77e"></path>
+                                                                <path
+                                                                    d="M4 4a3.36 3.36 0 00-1 2.38v11.24A3.38 3.38 0 006.38 21h11.24A3.36 3.36 0 0020 20z"
+                                                                    fill="#e7a33e"></path>
+                                                            </svg> Try Premium for free
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="d-flex align-items-center">
+
+                                                        <div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                data-supported-dps="16x16" fill="#000" width="16"
+                                                                height="16" focusable="false">
+                                                                <path
+                                                                    d="M12 1H4a1 1 0 00-1 1v13.64l5-3.36 5 3.36V2a1 1 0 00-1-1z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="growNetwork ms-1">
+                                                            My items
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-6">
+                    <div class="stories-profile mt-2">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="stories">
+                                        <div
+                                            class="card h-150px border border-dashed border-2 d-flex justify-content-center align-items-center">
+                                            <a href="#">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </a>
+                                            <p>Post a Story</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/02.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">Farjana Yesmen</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/03.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">Zakaria Islam</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/04-stories.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">Gutibaz</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/05-stories.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">Tarek Islam</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/01-stories.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">Ridwan</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/10.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">Marfi Laboni</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/shahed.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">M.F.U. Shahed</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="stories-img rounded h-150px"
+                                        style="background-image: url(images/arijit.jpg);background-repeat: no-repeat;background-size: cover;position: relative;padding: 10px;">
+                                        <a href="#" class="text-white small">Arijit Singh</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-part mt-2 mb-4">
+                        <div class="card px-4 py-4">
+                            <div class="d-flex gap-2 align-items-center">
+                                <a href="#">
+                                    <img src="images/apu barua.jpg" alt="" class="post-avatar">
+                                </a>
+                                <form action="" class="w-100 post-share">
+                                    <input type="text" class="form-control w-100" placeholder="Start a post"
+                                        href="#post-modal" data-bs-toggle="modal">
+                                </form>
+                            </div>
+                            <ul class="nav post-icon justify-content-between mt-2">
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            data-supported-dps="24x24" fill="#378fe9" class="mercado-match" width="24"
+                                            height="24" focusable="false">
+                                            <path
+                                                d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm1 13a1 1 0 01-.29.71L16 14l-2 2-6-6-4 4V7a1 1 0 011-1h14a1 1 0 011 1zm-2-7a2 2 0 11-2-2 2 2 0 012 2z">
+                                            </path>
+                                        </svg>
+                                        <span class="small">Photo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            data-supported-dps="24x24" fill="#5f9b41" class="mercado-match" width="24"
+                                            height="24" focusable="false">
+                                            <path
+                                                d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z">
+                                            </path>
+                                        </svg>
+                                        <span class="small">Video</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            data-supported-dps="24x24" fill="#c37d16" class="mercado-match" width="24"
+                                            height="24" focusable="false">
+                                            <path
+                                                d="M3 3v15a3 3 0 003 3h12a3 3 0 003-3V3zm13 1.75A1.25 1.25 0 1114.75 6 1.25 1.25 0 0116 4.75zm-8 0A1.25 1.25 0 116.75 6 1.25 1.25 0 018 4.75zM19 18a1 1 0 01-1 1H6a1 1 0 01-1-1V9h14zm-5.9-3a1 1 0 00-1-1H12a3.12 3.12 0 00-1 .2l-1-.2v-3h3.9v1H11v1.15a3.7 3.7 0 011.05-.15 1.89 1.89 0 012 1.78V15a1.92 1.92 0 01-1.84 2H12a1.88 1.88 0 01-2-1.75 1 1 0 010-.25h1a.89.89 0 001 1h.1a.94.94 0 001-.88z">
+                                            </path>
+                                        </svg>
+                                        <span class="small">Event</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            data-supported-dps="24x24" fill="#e16745" class="mercado-match" width="24"
+                                            height="24" focusable="false">
+                                            <path
+                                                d="M21 3v2H3V3zm-6 6h6V7h-6zm0 4h6v-2h-6zm0 4h6v-2h-6zM3 21h18v-2H3zM13 7H3v10h10z">
+                                            </path>
+                                        </svg>
+                                        <span class="small">Write Article</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="post-content">
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3">
+                    <div class="card mt-2">
+                        <div class="card-header bg-white border-0">
+                            <h5 class="card-title mt-2 feed-title">Add to your feed</h5>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="follower mb-3">
+                                <div>
+                                    <a href="#">
+                                        <img class="rounded-circle" src="images/arijit.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="ms-2">
+                                        <a href="#" class="follower-title">Arijit</a>
+                                        <p class="small text-truncate">News anchor</p>
+                                    </div>
+                                    <a href="#" class="ms-2 btn">
+                                        <span class="fa-solid fa-plus"></span> Follow
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="follower mb-3">
+                                <div>
+                                    <a href="#">
+                                        <img class="rounded-circle" src="images/10.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="ms-2">
+                                        <a href="#" class="follower-title">Lima Petric</a>
+                                        <p class="small text-truncate">Web Designer</p>
+                                    </div>
+                                    <a href="#" class="ms-2 btn">
+                                        <span class="fa-solid fa-plus"></span> Follow
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="follower mb-3">
+                                <div>
+                                    <a href="#">
+                                        <img class="rounded-circle" src="images/11.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="ms-2">
+                                        <a href="#" class="follower-title">Nitra Len</a>
+                                        <p class="small text-truncate">Web Developer</p>
+                                    </div>
+                                    <a href="#" class="ms-2 btn">
+                                        <span class="fa-solid fa-plus"></span> Follow
+                                    </a>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-sm btn-primary-soft w-100 mt-3">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--===========================================
+                Main End Here
+    ============================================-->
+
+    <!--===========================================
+                post modal start here
+    ============================================-->
+    <div class="modal fade" id="post-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Add Your Post</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="msg"></div>
+                    <form action="" id="post_modal_form">
+                        <div class="my-3">
+                            <label for="">Auth Name</label>
+                            <input type="text" class="form-control" name="authName">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Auth Photo</label>
+                            <input type="text" class="form-control" name="authPhoto">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Auth Designation</label>
+                            <input type="text" class="form-control" name="authDesignation">
+                        </div>
+                        <div class="my-3">
+                            <label for="">post Description</label>
+                            <textarea id="" rows="3" class="form-control" name="postDescription"></textarea>
+                        </div>
+                        <div class="my-3">
+                            <label for="">post Photo</label>
+                            <input type="text" class="form-control" name="postPhoto">
+                        </div>
+                        <div class="my-3">
+                            <input type="submit" class="btn btn-primary w-100" value="Add Post">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--===========================================
+                post modal end here
+    ============================================-->
+
+    <!--===========================================
+                edit post modal start here
+    ============================================-->
+    <div class="modal fade" id="edit-post-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Edit Your Post</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="edit_post_details">
+                    <form action="" id="postEdit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--===========================================
+                edit post modal end here
+    ============================================-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
